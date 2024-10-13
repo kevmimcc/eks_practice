@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "your-s3-bucket"
+    bucket = var.state_bucket
     key    = "eks-cluster/terraform.tfstate"
     region = "us-east-1"
   }
