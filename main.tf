@@ -6,7 +6,7 @@ terraform {
   backend "s3" {
     bucket = "shigital-state-bucket"
     key    = "eks-cluster/terraform.tfstate"
-    region = "us-east-1"
+    region = "us-west-2"
   }
 }
 
