@@ -82,6 +82,8 @@ resource "aws_eks_node_group" "eks_node_group" {
   tags = {
     Name = "eks-node-group"
   }
+
+  capacity_type = "SPOT"  # Use Spot instances
 }
 
 resource "aws_iam_role" "ec2_role" {
