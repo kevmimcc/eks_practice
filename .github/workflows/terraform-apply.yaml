@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Trigger on push to main (after a PR merge)
+      - dev
 
   workflow_dispatch:  # Add manual trigger option
 

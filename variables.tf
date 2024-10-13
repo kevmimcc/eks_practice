@@ -23,5 +23,5 @@ variable "min_capacity" {
 }
 
 variable "state_bucket" {
-  default = "shigital_state_bucket"
+  default = "shigital-state-bucket"
 }

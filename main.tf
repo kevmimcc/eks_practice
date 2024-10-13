@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "your-s3-bucket"
+    bucket = "shigital-state-bucket"
     key    = "eks-cluster/terraform.tfstate"
     region = "us-west-2"
   }
@@ -82,6 +82,8 @@ resource "aws_eks_node_group" "eks_node_group" {
   tags = {
     Name = "eks-node-group"
   }
+
+  capacity_type = "SPOT"  # Use Spot instances
 }
 
 resource "aws_iam_role" "ec2_role" {
