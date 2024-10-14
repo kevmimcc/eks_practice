@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "shigital-state-bucket"
+    bucket = "shigital-state-bucket"  # No variables allowed here
     key    = "eks-cluster/terraform.tfstate"
     region = "us-west-2"
   }
